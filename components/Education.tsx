@@ -2,75 +2,65 @@
 
 import React from 'react';
 
+interface EducationItem {
+  period: string;
+  institution: string;
+  degree?: string;
+  certificate?: string;
+}
+
 const Education = () => {
+  const educationItems: EducationItem[] = [
+    {
+      period: 'November 2017 - February 2023',
+      institution: 'University of Cross River State (UNICROSS), Calabar',
+      degree: 'B.Sc In Computer Science (Honors)'
+    },
+    {
+      period: 'September 2010 - July 2016',
+      institution: 'Pace Setter Secondary Commercial School, Mfom Ogoja',
+      certificate: 'West African Senior School Certificate'
+    }
+  ];
+
   return (
-    <section id="education" className="min-h-screen flex flex-col justify-center items-center px-6 md:px-12 py-12 text-center">
-      <h2 style={{
-        width: '100%',
-        maxWidth: '52rem',
-        fontSize: '2.5rem',
-        fontWeight: '600',
-        color: '#3B9C9C',
-        marginTop: '-8rem',
-        textAlign: 'left',
-      }}>My Education</h2>
-
-      <div
-        style={{
-          marginBottom: '3rem',
-          width: '100%',
-          maxWidth: '52rem',
-          borderBottom: '3px solid #e5e7eb',
-          borderLeft: '3px solid #e5e7eb',
-          textAlign: 'left',
-          padding: '1rem'
-        }}
-      >
-        <span style={{
-          fontSize: '1rem',
-          fontWeight: '500',
-          color: '#fff',
-          display: 'block',
-          marginBottom: '1rem',
-          backgroundColor: '#000',
-          width: '18rem',
-          padding: '0.3rem',
-          textAlign: "center",
-        }}>November 2017 - February 2023</span>
-        <h1>University of Cross River State (UNICROSS), Calabar</h1>
-        <p>B.Sc In Computer Science (Honors)</p>
+    <section 
+      id="education" 
+      className="min-h-screen flex flex-col items-center justify-center py-4 px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl"
+    >
+      <div className="w-full max-w-4xl mx-auto mb-12">
+        <h2 className="text-3xl sm:text-4xl font-semibold text-[#3B9C9C] text-left">
+          My Education
+        </h2>
       </div>
 
-      <div
-        style={{
-          marginBottom: '3rem', 
-          width: '100%',
-          maxWidth: '52rem',
-          borderBottom: '3px solid #e5e7eb',
-          borderLeft: '3px solid #e5e7eb',
-          textAlign: 'left',
-          padding: '1rem',
-        }}
-      >
-        <span style={{
-          fontSize: '1rem',
-          fontWeight: '500',
-          color: '#fff',
-          display: 'block',
-          marginBottom: '1rem',
-          backgroundColor: '#000',
-          width: '16rem',
-          padding: '0.3rem',
-          textAlign: "center"
-        }}>September 2010 - July 2016</span>
-        <h1>Pace Setter Secondary Commercial School, Mfom Ogoja</h1>
-        <p> West African Senior School Certificate</p>
-        <p className="text-gray-600 mt-2">
-          
-        </p>
-      </div>
+      <div className="w-full max-w-4xl space-y-8">
 
-      
+        {educationItems.map((item, index) => (
+          <div 
+            key={index}
+            className="border-b-2 border-l-2 border-gray-200 p-4 sm:p-6"
+          >
+            <span className="block text-sm sm:text-base font-medium text-white bg-black w-full sm:w-fit px-3 py-1 mb-4 text-center sm:text-left">
+              {item.period}
+            </span>
+            <h3 className="text-xl sm:text-2xl font-bold mb-2">
+              {item.institution}
+            </h3>
+            {item.degree && (
+              <p className="text-lg text-gray-800">
+                {item.degree}
+              </p>
+            )}
+            {item.certificate && (
+              <p className="text-lg text-gray-800">
+                {item.certificate}
+              </p>
+            )}
+          </div>
+        ))}
+
+      </div>
     </section>
   );
 };

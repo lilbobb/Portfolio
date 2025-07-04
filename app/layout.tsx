@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-
 import { Poppins } from 'next/font/google';
 import Navbar from '@/components/NavBar'
 import Footer from '@/components/Footer'
@@ -8,13 +7,12 @@ import Skill from '@/components/Skill';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
 import Education from '@/components/Education';
-import Contact from '@/components/Contact';
+import Contact from '@/components/Contact'; 
 
 export const metadata = {
   title: 'Robert Ukurowo Adoga - Portfolio',
   description: 'Frontend Engineer | React | Next.js | TypeScript | Cybersecurity Enthusiast',
 }
-
 
 const poppins = Poppins({
   subsets: ['latin'],

@@ -5,17 +5,18 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",  // In case you have a `src/`
-    "./public/**/*.html",              // If you use static HTML
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",  
+    "./public/**/*.html",             
   ],
   theme: {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        // luckiest: ['"Luckiest Guy"', 'cursive'],
       },
       colors: {
-        background: '#ffffff', // or whatever you want
-        foreground: '#000000', // or whatever you want
+        background: '#ffffff',
+        foreground: '#000000', 
       },
     },
   },

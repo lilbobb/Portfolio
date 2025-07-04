@@ -17,34 +17,21 @@ import { FaCode } from 'react-icons/fa';
 
 const Skill = () => {
   return (
-    <section id="skill" className="min-h-screen flex flex-col justify-center items-center px-6 md:px-12 py-12 text-center">
-      <h2 style={{
-        width: '100%',
-        maxWidth: '52rem',
-        fontSize: '2.5rem',
-        fontWeight: '600',
-        color: '#3B9C9C',
-        marginBottom: '2rem',
-        textAlign: 'left',
-      }}>My Skills</h2>
+    <section 
+      id="skill" 
+      className="min-h-screen flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl"
+    >
+      {/* Section Header */}
+      <div className="w-full max-w-4xl mx-auto mb-12 text-left">
+        <h2 className="text-3xl sm:text-4xl font-semibold text-[#3B9C9C]">
+          My Skills
+        </h2>
+      </div>
 
-      <div
-        className="shadow-md border border-gray-200 p-6"
-        style={{
-          borderRadius: '6px',
-          width: '100%',
-          maxWidth: '48rem',
-          marginBottom: '3rem'
-        }}
-      >
-        <span style={{
-          fontSize: '1.5rem',
-          fontWeight: '600',
-          color: '#111827',
-          display: 'block',
-          marginBottom: '1rem',
-        }}>Frontend</span>
-        <ul className="flex flex-wrap mt-4 justify-center">
+      {/* Frontend Skills */}
+      <div className="w-full max-w-4xl shadow-md border border-gray-200 p-6 rounded-lg mb-8">
+        <h3 className="text-2xl text-center font-semibold text-gray-900 mb-4">Frontend</h3>
+        <ul className="flex flex-wrap justify-center gap-2 mt-4">
           {[
             { name: 'HTML', icon: <SiHtml5 className="w-5 h-5 text-orange-500" /> },
             { name: 'CSS', icon: <SiCss3 className="w-5 h-5 text-blue-500" /> },
@@ -56,19 +43,7 @@ const Skill = () => {
           ].map((skill) => (
             <li
               key={skill.name}
-              style={{
-                padding: '1rem 1.5rem',
-                borderRadius: '0.2rem',
-                margin: '0.5rem',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                border: '1px solid #e5e7eb',
-                backgroundColor: '#f9fafb',
-                fontSize: '1rem',
-                fontWeight: 500,
-                color: '#111827',
-              }}
+              className="px-4 py-3 rounded-sm border border-gray-200 bg-gray-50 flex items-center gap-2 text-base font-medium text-gray-900"
             >
               {skill.icon}
               {skill.name}
@@ -76,22 +51,11 @@ const Skill = () => {
           ))}
         </ul>
       </div>
-      <div
-        className="shadow-md border border-gray-200 p-6"
-        style={{
-          borderRadius: '6px',
-          width: '100%',
-          maxWidth: '48rem'
-        }}
-      >
-        <span style={{
-          fontSize: '1.5rem',
-          fontWeight: '600',
-          color: '#111827',
-          display: 'block',
-          marginBottom: '1rem',
-        }}>TOOLS & SERVICES</span>
-        <ul className="flex flex-wrap mt-4 justify-center">
+
+      {/* Tools & Services */}
+      <div className="w-full max-w-4xl shadow-md border border-gray-200 p-6 rounded-lg">
+        <h3 className="text-2xl text-center font-semibold text-gray-900 mb-4">Tools & Services</h3>
+        <ul className="flex flex-wrap justify-center gap-2 mt-4">
           {[
             { name: 'Git', icon: <SiGit className="w-5 h-5 text-orange-600" /> },
             { name: 'GitHub', icon: <SiGithub className="w-5 h-5 text-gray-800" /> },
@@ -102,19 +66,7 @@ const Skill = () => {
           ].map((skill) => (
             <li
               key={skill.name}
-              style={{
-                padding: '1rem 1.5rem',
-                borderRadius: '0.2rem',
-                margin: '0.5rem',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                border: '1px solid #e5e7eb',
-                backgroundColor: '#f9fafb',
-                fontSize: '1rem',
-                fontWeight: 500,
-                color: '#111827',
-              }}
+              className="px-4 py-3 rounded-sm border border-gray-200 bg-gray-50 flex items-center gap-2 text-base font-medium text-gray-900"
             >
               {skill.icon}
               {skill.name}
