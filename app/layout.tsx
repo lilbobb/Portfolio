@@ -8,6 +8,8 @@ import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
 import Education from '@/components/Education';
 import Contact from '@/components/Contact'; 
+import { AnimatePresence } from 'framer-motion';
+import { MotionConfig } from 'framer-motion';
 
 export const metadata = {
   title: 'Robert Ukurowo Adoga - Portfolio',
@@ -24,14 +26,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head />
       <body className={`${poppins.className} bg-background text-foreground`}>
+        <MotionConfig reducedMotion="user">
         <Navbar />
+        <AnimatePresence mode="wait">
         <main className="min-h-screen">{children}</main>
+         </AnimatePresence>
         <Skill />
         <Experience />
         <Projects />
         <Education />
         <Contact />
         <Footer />
+         </MotionConfig>
       </body>
     </html>
   );
